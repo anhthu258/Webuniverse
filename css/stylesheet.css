@@ -14,7 +14,7 @@
 
 body{
     font-family: prenton-condensed, sans-serif;
-    font-weight: 500;
+    font-weight: 300;
     font-style: normal;
 }
 
@@ -22,7 +22,7 @@ h1{
     font-family: nicholas, sans-serif;
     font-weight: 800;
     font-style: normal;
-    font-size: 150px;
+    font-size: 180px;
     display: flex;
     flex-direction: row-reverse;
     padding-right: 10px;
@@ -33,7 +33,7 @@ h2{
     font-family: prenton-display, sans-serif;
     font-weight: 100;
     font-style: normal;
-    font-size: 75px;
+    font-size: 80px;
     display:flex;
     flex-direction: row-reverse;
     padding-right: 10px;
@@ -113,23 +113,52 @@ header::after {
     clear: both;
 }
 
-#intro{
+#intro {
     background-image: url(../img/red-chair.JPG);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     height: 500px;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start; 
+    align-items: center; 
     color: white;
     text-align: left;
+    padding-left: 50px; 
 }
 
-.content{
+.content {
     background-color: var(--dark-blue);
     opacity: 0.8;
     padding: 50px;
+    max-width: 400px;
+}
+
+#motivation {
+    background-color: var(--dark-turquoise);
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 50px;
+}
+
+#motivation h2 {
+    color: var(--white);
+    font-family: nicholas, sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    display: contents;
+}
+
+#motivation p {
+    flex: 1;
+    width: 50%;
+    color: var(--white);
+}
+
+#motivation img {
+    width: 30%;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 #fixed{
@@ -138,7 +167,8 @@ header::after {
     position: fixed;
     bottom: 0;
     right: 50px;
-    padding: 10px;
+    padding: 20px;
+    font-size: 18px;
 }
 
 #fixed a{
@@ -155,6 +185,11 @@ footer {
     text-align: center;
     padding: 20px;
     margin-top: 50px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center
 }
 
 footer nav ul {
