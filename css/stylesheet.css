@@ -3,3 +3,35 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+:root {
+    --dark-grey: #353535;
+    --dark-turquoise: #3c6e71;
+    --white: #ffffff;
+    --light-grey: #d9d9d9;
+    --dark-blue: #284b63;
+  }
+
+body{
+    font-family: prenton-condensed, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+h1{ 
+    font-family: nicholas, sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 150px;
+}
+
+h2{
+    font-family: prenton-display, sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 75px;
+}
+
+header{
+    background-color: white;
+}
