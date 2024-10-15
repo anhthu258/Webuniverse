@@ -255,11 +255,16 @@ footer {
     text-align: center;
     padding: 20px;
     margin-top: 50px;
-    height: 400px;
+    height: 350px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center
+}
+
+footer img{
+    padding-bottom: 2%;
+    width: 400px;
 }
 
 footer nav ul {
@@ -280,4 +285,38 @@ footer nav ul li:last-child {
 footer nav ul li a {
     text-decoration: none;
     color: var(--dark-grey);
+}
+
+@media (max-width:991){
+    #logo{
+        display: none;
+    }
+
+    header .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #fff;
+        border-top: 1px solid rgba(0,0,0,0.1);
+        display: none;
+    }
+
+    header .navbar ul li{
+        width: 100%;
+    }
+
+    header .navbar ul li ul{
+        position: relative;
+        width: 100%;
+    }
+
+    header .navbar ul li ul li{
+        background: #eee;
+    }
+
+    header .navbar ul li ul li ul{
+        width: 100%;
+        left: 0;
+    }
 }
