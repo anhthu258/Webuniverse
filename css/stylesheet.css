@@ -26,6 +26,7 @@ h1{
     display: flex;
     flex-direction: row-reverse;
     padding-right: 10px;
+    color: var(--dark-grey);
 }
 
 h2{
@@ -36,6 +37,7 @@ h2{
     display:flex;
     flex-direction: row-reverse;
     padding-right: 10px;
+    color: var(--dark-turquoise);
 }
 
 #header{
@@ -54,4 +56,123 @@ h2{
 
 header{
     background-color: white;
+}
+
+header .navbar ul{
+    list-style: none;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    background: var(--light-grey);
+}
+
+header .navbar ul li{
+    position: relative;
+}
+
+header .navbar ul li a{
+    text-decoration: none;
+    font-size: 20px;
+    padding: 18px;
+    color: var(--dark-blue);
+    display: block;
+    background: var(--light-grey);
+}
+
+header .navbar ul li a:hover{
+    background: var(--dark-blue);
+    color: #fff;
+}
+
+header .navbar ul li ul{
+    position: absolute;
+    left: 0;
+    width: 200px;
+    background: var(--light-grey);
+    display: none;
+}
+
+header .navbar ul li ul li{
+    width: 100%;
+    border-top: 1px solid var(--dark-grey);
+}
+
+header .navbar ul li ul li ul{
+    left: 200px;
+    top: 0;
+}
+
+header .navbar ul li:focus-within > ul,
+header .navbar ul li:hover > ul{
+    display: block;
+}
+
+header::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#intro{
+    background-image: url(../img/red-chair.JPG);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: left;
+}
+
+.content{
+    background-color: var(--dark-blue);
+    opacity: 0.8;
+    padding: 50px;
+}
+
+#fixed{
+    color: var(--white);
+    background-color: var(--dark-blue);
+    position: fixed;
+    bottom: 0;
+    right: 50px;
+    padding: 10px;
+}
+
+#fixed a{
+    color: var(--white);
+    text-decoration: none;
+    font-family: prenton-condensed, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+footer {
+    background-color: var(--light-grey);
+    color: black;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+footer nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+footer nav ul li {
+    display: inline-block; 
+    margin-right: 15px; 
+}
+
+footer nav ul li:last-child {
+    margin-right: 0;
+}
+
+footer nav ul li a {
+    text-decoration: none;
+    color: var(--dark-grey);
 }
