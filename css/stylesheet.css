@@ -99,7 +99,7 @@ header .navbar ul li ul{            /*Styling af dropdown menu i navbar*/
 
 header .navbar ul li ul li{         /*Styling af list item i dropdown menu*/
     width: 100%;
-    padding: 15px;
+    padding: 10px;
     border-top: 1px solid var(--dark-grey);
 }
 
