@@ -19,6 +19,10 @@ body p{                               /*Set default font-family og style for alt
     letter-spacing: 1px;
 }
 
+body{
+    overflow-x: hidden;
+}
+
 h1{                                 /*Styling for main heading h1*/
     font-family: nicholas, sans-serif;
     font-weight: 800;
@@ -87,13 +91,15 @@ header .navbar ul li a:hover{       /*Styling af navigationsbar under hover tils
 header .navbar ul li ul{            /*Styling af dropdown menu i navbar*/
     position: absolute;
     left: 0;
-    width: 200px;
+    width: 100%;                    /*Definere at den skal udfylde hele siden*/
     background: var(--light-grey);
     display: none;
+    z-index: 10;                    /*Styrer stablingrækkefølge højere værdi ligger øverst, i denne tilfælde ligger alt under ul øverst for alle andre elementer*/
 }
 
 header .navbar ul li ul li{         /*Styling af list item i dropdown menu*/
     width: 100%;
+    padding: 15px;
     border-top: 1px solid var(--dark-grey);
 }
 
@@ -152,6 +158,12 @@ header::after {                     /*Fjern floats efter header content*/
     gap: 20px;
     z-index: 0;
     flex-direction: row-reverse;
+    padding: 20px;
+}
+
+#motivation img{
+    max-width: 100%;                /*sørg for at billedet passer in i dens container*/
+    height: auto;
 }
 
 #motivation h2 {                    /*Styling af secondary heading under motivations section*/
@@ -163,8 +175,12 @@ header::after {                     /*Fjern floats efter header content*/
 }
 
 #motivation p {                    /*Styling af paragraph under motivations section*/                     
-    flex: 1;
+    flex: 1;                       /*Tillader paragraph til at gro og mindske*/
     width: 50%;
+    color: var(--white);
+}
+
+#motivation a{                      /*Styling af eksterne link under motivations section*/
     color: var(--white);
 }
 
@@ -215,6 +231,11 @@ flex-direction: column;
 justify-content: space-between;
 }
 
+aside a{
+    text-decoration: none;
+    color: var(--dark-blue);
+}
+
 .teaser {                           /*Styling for teaser img under aside*/
     width: 40%;
     flex-shrink: 0;
@@ -237,6 +258,7 @@ justify-content: space-between;
     right: 50px;
     padding: 20px;
     font-size: 18px;
+    z-index: 9;
 }
 
 #fixed a{                           /*Styling for links i fixed*/
