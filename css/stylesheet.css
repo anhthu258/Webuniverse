@@ -1,10 +1,10 @@
-*{
+*{                                  /*Reset alt default setting for margin og padding, dermed definere alle box-sizing til border-box*/
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-:root {
+:root {                             /*Definere nogle css variables for farver for nemmere tilgang*/
     --dark-grey: #353535;
     --dark-turquoise: #3c6e71;
     --white: #ffffff;
@@ -12,53 +12,52 @@
     --dark-blue: #284b63;
   }
 
-body{
+body{                               /*Set default font-family og style for alt under body*/
     font-family: prenton-condensed, sans-serif;
-    font-weight: 300;
+    font-weight: 250;
     font-style: normal;
 }
 
-h1{ 
+h1{                                 /*Styling for main heading h1*/
     font-family: nicholas, sans-serif;
     font-weight: 800;
     font-style: normal;
-    font-size: 180px;
-    display: flex;
-    flex-direction: row-reverse;
-    padding-right: 10px;
+    font-size: 11rem;
     color: var(--dark-grey);
 }
 
-h2{
+h2{                                 /*Styling for secondary heading h2*/
     font-family: prenton-display, sans-serif;
     font-weight: 100;
     font-style: normal;
-    font-size: 80px;
-    display:flex;
-    flex-direction: row-reverse;
-    padding-right: 10px;
+    font-size: 5rem;
     color: var(--dark-turquoise);
 }
 
-#header{
+h1 h2{                              /*Fælles styling for h1 og h2*/
+    display:flex;
+    flex-direction: row-reverse;
+    padding-right: 10px;
+}
+
+#header{                            /*Bestemt layout for header med brug af flexbox*/
     display: flex;
     justify-content: space-between;
 }
 
-#logo{
+#logo{                              /*Style og rotation af logo*/
     transform: rotate(270deg);
     width: 250px;
     height: 250px;
     object-fit: contain;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 0 10px;
 }
 
-header .navbar {
+header .navbar {                    /*Bestemt baggrundsfarve for navigationsbar*/
     background-color: white;
 }
 
-header .navbar ul{
+header .navbar ul{                  /*Styling af navigationsbar*/
     list-style: none;
     width: 100%;
     display: flex;
@@ -66,11 +65,11 @@ header .navbar ul{
     background: var(--light-grey);
 }
 
-header .navbar ul li{
+header .navbar ul li{               /*Definere position af navigationsbar listitem*/
     position: relative;
 }
 
-header .navbar ul li a{
+header .navbar ul li a{             /*Styling af links i navigationsbar*/
     text-decoration: none;
     font-size: 20px;
     padding: 18px;
@@ -79,12 +78,12 @@ header .navbar ul li a{
     background: var(--light-grey);
 }
 
-header .navbar ul li a:hover{
+header .navbar ul li a:hover{       /*Styling af navigationsbar under hover tilstand*/
     background: var(--dark-blue);
     color: #fff;
 }
 
-header .navbar ul li ul{
+header .navbar ul li ul{            /*Styling af dropdown menu i navbar*/
     position: absolute;
     left: 0;
     width: 200px;
@@ -92,34 +91,34 @@ header .navbar ul li ul{
     display: none;
 }
 
-header .navbar ul li ul li{
+header .navbar ul li ul li{         /*Styling af list item i dropdown menu*/
     width: 100%;
     border-top: 1px solid var(--dark-grey);
 }
 
-header .navbar ul li ul li ul{
+header .navbar ul li ul li ul{      /*Styling af nested dropdown menu*/
     left: 200px;
     top: 0;
 }
 
 header .navbar ul li:focus-within > ul,
-header .navbar ul li:hover > ul{
+header .navbar ul li:hover > ul{     /*Definere display af dropdown menu på hover eller fokus*/
     display: block;
-    z-index: 10;
+    z-index: 10;                     /*Styrer stablingrækkefølge højere værdi ligger øverst, i denne tilfælde ligger alt under ul øverst for alle andre elementer*/
 }
 
-header::after {
+header::after {                     /*Fjern floats efter header content*/
     content: "";
     display: table;
     clear: both;
 }
 
-#intro {
+#intro {                            /*Styling til intro section med bagrundsbillede*/
     background-image: url(../img/red-chair.JPG);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 500px;
+    min-height: 500px;
     display: flex;
     justify-content: flex-start; 
     align-items: center; 
@@ -128,14 +127,14 @@ header::after {
     padding-left: 50px; 
 }
 
-.content {
+.content {                          /*Styling af content inde i intro section*/
     background-color: var(--dark-blue);
     opacity: 0.8;
     padding: 50px;
     max-width: 400px;
 }
 
-#motivation {
+#motivation {                       /*Layout og styling af motivation section*/
     background-color: var(--dark-turquoise);
     display: flex;
     align-items: flex-start;
@@ -144,7 +143,7 @@ header::after {
     z-index: 0;
 }
 
-#motivation h2 {
+#motivation h2 {                    /*Styling af secondary heading under motivations section*/
     color: var(--white);
     font-family: nicholas, sans-serif;
     font-weight: 800;
@@ -152,55 +151,55 @@ header::after {
     display: contents;
 }
 
-#motivation p {
+#motivation p {                    /*Styling af paragraph under motivations section*/                     
     flex: 1;
     width: 50%;
     color: var(--white);
 }
 
-#motivation img {
+#motivation img {                  /*Styling af billeder under motivations section*/
     width: 30%;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-#intro, #motivation {
+#intro, #motivation {               /*Dele styling for både intro og motivation section*/
     position: relative;
     padding: 20px;
 }
 
-#plant img {
+#plant img {                        /*Definere postion og stylling af plant img*/
     position: absolute;
     top: 700px;
     left: 75%;
-    z-index: 1;
+    z-index: 1;                     /*Sammen måde som navbar bliver plant img placeres øverst over for andre elementer med z-index*/
     width: 150px;
-    transform: rotate(270deg);
+    transform: rotate(270deg);      /*Rotering af billedet*/
     width: 800px;
 }
 
-aside {
+aside {                             /*Styling og layout for aside*/
     display: flex;
     gap: 20px; 
     justify-content: space-around;
 }
 
-aside p{
+aside p{                            /*Styling for paragraph under aside*/
     padding-bottom: 10px;
 }
 
-aside .content{
+aside .content{                     /*Styling for content blocks under aside*/
 background-color: var(--white);
 display: flex;
 flex-direction: column;
 justify-content: space-between;
 }
 
-.teaser {
+.teaser {                           /*Styling for teaser img under aside*/
     width: 40%;
     flex-shrink: 0;
 }
 
-.teaser img {
+.teaser img {                       /*Styling for img under teaser*/
     width: 200%;
     height: 200px;
     object-fit: cover;
@@ -209,7 +208,7 @@ justify-content: space-between;
 
 
 
-#fixed{
+#fixed{                             /*Styling for fixed sektionen i højre bund af siden*/
     color: var(--white);
     background-color: var(--dark-blue);
     position: fixed;
@@ -219,7 +218,7 @@ justify-content: space-between;
     font-size: 18px;
 }
 
-#fixed a{
+#fixed a{                           /*Styling for links i fixed*/
     color: var(--white);
     text-decoration: none;
     font-family: prenton-condensed, sans-serif;
@@ -227,7 +226,7 @@ justify-content: space-between;
     font-style: normal;
 }
 
-#konstruktion {
+#konstruktion {                     /*Definere ayout for construction*/
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -235,12 +234,12 @@ justify-content: space-between;
     text-align: center;
 }
 
-#konstruktion h1 {
+#konstruktion h1 {                  /*Styling for main heading h1 i construction*/
     margin: 5%;
     color: var(--dark-blue);
 }
 
-#konstruktion a{
+#konstruktion a{                     /*Styling for links i construction*/
     text-decoration: none;
     color: var(--white);
     font-size: 18px;
@@ -249,7 +248,7 @@ justify-content: space-between;
 }
 
 
-footer {
+footer {                            /*Styling for footer*/
     background-color: var(--light-grey);
     color: black;
     text-align: center;
@@ -262,60 +261,68 @@ footer {
     justify-content: center
 }
 
-footer img{
+footer img{                         /*Styling for logoet under footer*/
     padding-bottom: 2%;
     width: 400px;
 }
 
-footer nav ul {
+footer nav ul {                     /*Styling footers navigationsbar*/
     padding: 0;
     margin: 0;
     list-style: none;
 }
 
-footer nav ul li {
+footer nav ul li {                  /*Styling for list items under footer navigationsbar*/
     display: inline-block; 
     margin-right: 15px; 
 }
 
-footer nav ul li:last-child {
+footer nav ul li:last-child {       /* Fjerne margin for den sidste list item i footer*/
     margin-right: 0;
 }
 
-footer nav ul li a {
+footer nav ul li a {                /* Style for links i footer navigationsbar */
     text-decoration: none;
     color: var(--dark-grey);
 }
 
-@media (max-width:991){
-    #logo{
+@media (max-width:768px){             /* Media query for screens smaller than 991px */
+    #logo{                            /* Gemmer logoet på mindre skærm */
         display: none;
     }
 
-    header .navbar{
+    h1{                               /*Justering af heading styling på mindre skærm*/
+        font-size: 9rem;
+    }
+
+    h2{                               /*Justering af heading styling på mindre skærm*/
+        font-size: 3rem;
+    }
+
+    header .navbar{                 /*Styling for navbar på smaller mindre*/
         position: absolute;
         top: 100%;
         left: 0;
         right: 0;
-        background: #fff;
+        background: var(--white);
         border-top: 1px solid rgba(0,0,0,0.1);
         display: none;
     }
 
-    header .navbar ul li{
+    header .navbar ul li{          /*Definere full-width til list items i navbar*/
         width: 100%;
     }
 
-    header .navbar ul li ul{
+    header .navbar ul li ul{        /*Justere dropdown menu styling på mindre skærm*/
         position: relative;
         width: 100%;
     }
 
-    header .navbar ul li ul li{
+    header .navbar ul li ul li{     /*Justere submenu styling på mindre skærm*/
         background: #eee;
     }
 
-    header .navbar ul li ul li ul{
+    header .navbar ul li ul li ul{   /*Definere full-width til nested dropdown menu*/
         width: 100%;
         left: 0;
     }
