@@ -161,11 +161,6 @@ header::after {                     /*Fjern floats efter header content*/
     padding: 20px;
 }
 
-#motivation img{
-    max-width: 100%;                /*sørg for at billedet passer in i dens container*/
-    height: auto;
-}
-
 #motivation h2 {                    /*Styling af secondary heading under motivations section*/
     color: var(--white);
     font-family: nicholas, sans-serif;
@@ -197,6 +192,8 @@ header::after {                     /*Fjern floats efter header content*/
 #motivation img {                  /*Styling af billeder under motivations section*/
     width: 30%;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    max-width: 100%;                /*sørg for at billedet passer in i dens container*/
+    height: auto;
 }
 
 #intro, #motivation {               /*Dele styling for både intro og motivation section*/
@@ -290,7 +287,6 @@ aside a{
     padding: 10px;
 }
 
-
 footer {                            /*Styling for footer*/
     background-color: var(--light-grey);
     color: black;
@@ -327,6 +323,162 @@ footer nav ul li:last-child {       /* Fjerne margin for den sidste list item i 
 footer nav ul li a {                /* Style for links i footer navigationsbar */
     text-decoration: none;
     color: var(--dark-grey);
+}
+
+/*STYLING AF STRUKTUR UNDER MENU*/
+
+.layout-1{
+    background-color: var(--dark-blue);
+    color: var(--white);
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 10px;
+    flex-direction: row-reverse;
+    padding: 10px;
+}
+
+.layout-1 h2{
+    font-family: nicholas, sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 4rem;
+    color: var(--white);
+    display: block;
+}
+
+.layout-1 img{
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    max-width: 100%;
+    height: auto;
+    width: 40%;
+}
+
+.layout-1 section{
+    padding: 2rem;
+}
+
+.layout-2{
+    background-color: var(--white);
+    color: var(--dark-grey);
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 10px;
+}
+
+.layout-2 h2{
+    font-family: nicholas, sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 4rem;
+    color: var(--dark-blue);
+    display: block;
+}
+
+.layout-2 img{
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    max-width: 100%;
+    height: auto;
+    width: 40%;
+}
+
+.layout-2 section{
+    padding: 2rem;
+}
+
+/*STYLING FOR DISKUSSION*/
+
+.bg-main{
+    background-image: url(../img/students.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 500px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-left: 50px;
+}
+
+.bg-main h1{
+    color: var(--white);
+}
+
+.comment-section {
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.comment-section h2 {
+    margin-top: 0;
+    display: block;
+}
+
+.comment-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.comment-form textarea {
+    resize: none;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    height: 100px;
+}
+
+.comment-form button {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--dark-turquoise);
+    color: white;
+    cursor: pointer;
+}
+
+.comment-form button:hover {
+    background-color: var(--dark-grey);
+}
+
+.comments {
+    margin-top: 20px;
+}
+
+.comment {
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+}
+
+.username {
+    font-weight: bold;
+    color: var(--dark-blue);
+}
+
+.comment-text {
+    margin: 5px 0 0;
+}
+
+.reply-btn {
+    padding: 5px 10px;
+    background-color: var(--dark-turquoise);
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.reply-btn:hover {
+    background-color: var(--dark-grey);
 }
 
 @media (max-width:768px){             /* Media query for screens smaller than 991px */
