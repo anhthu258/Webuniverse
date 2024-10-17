@@ -35,7 +35,7 @@ h1{                                 /*Styling for main heading h1*/
 }
 
 a{
-    text-decoration: none;
+    color: var(--white);
 }
 
 h2{                                 /*Styling for secondary heading h2*/
@@ -352,10 +352,12 @@ footer nav ul li a {                /* Style for links i footer navigationsbar *
     color: var(--white);
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
     gap: 10px;
     flex-direction: row-reverse;
-    padding: 10px;
+    max-width: 1200px; 
+    margin: 0 auto;  
+    padding: 0 20px; 
 }
 
 .layout-1 h2{
@@ -383,9 +385,11 @@ footer nav ul li a {                /* Style for links i footer navigationsbar *
     color: var(--dark-grey);
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
     gap: 10px;
-    padding: 10px;
+    max-width: 1200px;
+    margin: 0 auto; 
+    padding: 0 20px;
 }
 
 .layout-2 h2{
@@ -633,6 +637,53 @@ section p{
     border-radius: 5px;
 }
 
+/*STYLING AF CHECKBOX*/
+input[type="checkbox"] {                                            /*Gemmer default checkbox*/
+    display: none;
+}
+
+.custom-checkbox {                                                  /*Definere en custom checkbox*/
+    display: flex;
+    cursor: pointer;
+    font-size: 16px;
+    position: relative;
+    padding-left: 30px;
+}
+
+.custom-checkbox .checkmark {                                       /*Bestemt checkmark i tom box)*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+    border: 2px solid #ccc;
+}
+
+.custom-checkbox input:checked + .checkmark {                       /*Når checkbox er krydset af skifter den farve*/
+    background-color: var(--dark-turquoise);
+    border-color: var(--dark-turquoise);
+}
+
+.custom-checkbox .checkmark:after {                                 /*Definere at checkmark kan ses efter man har krydset af*/
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.custom-checkbox input:checked + .checkmark:after {                 /*Viser checkmark efter*/
+    display: block;
+}
+
+.custom-checkbox .checkmark:after {                                 /*Styling af checkmark*/
+    left: 7px;
+    top: 3px;
+    width: 6px;
+    height: 12px;
+    border: solid var(--white);
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
 
 @media (max-width: 500px) {
     .login-box {
