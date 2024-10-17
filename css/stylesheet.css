@@ -418,7 +418,7 @@ section ol{
     font-weight: 800;
     font-style: normal;
     letter-spacing: 1px;
-    padding: 1%;
+    padding: 1.5%;
 }
 
 section ul{
@@ -430,13 +430,20 @@ section ul{
 }
 
 section h3{
-    padding: 1.5% 0;
+    padding: 1.5%;
 }
 
 section p{
     font-family: prenton-display, sans-serif;
     font-weight: 800;
     font-style: normal;
+    display: block;
+    padding: 1%;
+}
+
+.citat{
+    font-style: italic;
+    text-align: center;
 }
 
 /*STYLING FOR DISKUSSION*/
@@ -473,6 +480,7 @@ section p{
     text-align: center;
 }
 
+/*STYLING FOR COMMENT SECTION*/
 
 .comment-section {
     background: white;
@@ -549,7 +557,91 @@ section p{
     background-color: var(--dark-grey);
 }
 
-@media (max-width:900px){             /* Media query for screens smaller than 991px */
+/*STYLING AF LOG IN BUTTON*/
+
+.login-container {                                      /*Centering af login knappen i en lukket kontainer*/
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 10vh;                                       /* 10% i højde af viewport*/
+    padding: 10px;
+}
+
+.login-btn {                                            /*Styling af login knappen*/
+    background-color: var(--dark-grey); 
+    border: none; 
+    color: white;
+    padding: 15px 32px;                                 /* Padding inde i the knappen */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;             /*En mere flydende hover på farve skift*/
+}
+
+.login-btn:hover {
+    background-color: var(--light-grey);
+    color: var(--dark-grey);
+}
+
+/*STYLING AF LOGIN SIDEN*/
+
+.login-container-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    background-color: var(--white);
+}
+
+.login-box {                                            /*Styling af login box*/
+    background-color: var(--dark-turquoise);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+.login-box h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--white);
+}
+
+.input-group {                                          /*Definere og styling af input kontainer*/
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 14px;
+    color: var(--white);
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid var(--light-grey);
+    border-radius: 5px;
+}
+
+
+@media (max-width: 500px) {
+    .login-box {
+        width: 90%;
+    }
+}
+
+
+@media (max-width:900px){
     #logo{                            /* Gemmer logoet på mindre skærm */
         display: none;
     }

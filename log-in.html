@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Study Lab Diskussion</title>
+    <title>Study Lab Log In</title>
     <link rel="stylesheet" href="https://use.typekit.net/uhr0hcq.css">
     <link rel="stylesheet" href="../css/stylesheet.css">
 </head>
@@ -50,36 +50,28 @@
     </header>
 
     <main class="bg-main">
-        <h1>DISKUSSION</h1>
+        <h1>Login</h1>
     </main>
     <div id="plant"><img src="./img/plants.png" alt="Billede af en plante uden baggrund"></div>
     
-    <div class="login-container">
-        <a href="log-in.html"><button class="login-btn">Login</button></a>
+    <div class="login-container-2">
+        <div class="login-box">
+            <h2>Log ind</h2>
+            <form action="/login" method="post">
+                <div class="input-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit" class="login-btn">Login</button>
+            </form>
+        </div>
     </div>
 
-    <aside class="comment-section">
-        <h2>Kommentar</h2>
-        <section class="comment-form">
-            <textarea placeholder="Write your comment..." required></textarea>
-            <button type="submit">Post Comment</button>
-        </section>
-        <section class="comments">
-            <article class="comment">
-                <p class="username">Søvnige Gorilla:</p>
-                <p class="comment-text">Er der en der har tips til hvordan man kan falde i søvn hurtiger? Jeg sover på alle de forkerte tidspunkter</p>
-                <button class="reply-btn">Reply</button>
-            </article>
-            <article class="comment">
-                <p class="username">Doven Ugle:</p>
-                <p class="comment-text">For dem der studere om natten, hvad er det i bruger af lamper? Min er for lyst, så det er ret hårdt for øjnene</p>
-                <button class="reply-btn">Reply</button>
-            </article>
-        </section>
-    </aside>
-
     <div id="plant-2"><img src="./img/plants.png" alt="Billede af en plante uden baggrund"></div>
-
     <footer>
         <img src="../img/studylab-logo.png" alt="Study lab logo i sort">
         <nav id="footer">
