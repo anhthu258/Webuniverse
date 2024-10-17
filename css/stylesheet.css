@@ -136,6 +136,7 @@ header::after {                     /*Fjern floats efter header content*/
     color: white;
     text-align: left;
     padding-left: 50px; 
+    font-size: 18px;
 }
 
 .content {                          /*Styling af content inde i intro section*/
@@ -175,8 +176,9 @@ header::after {                     /*Fjern floats efter header content*/
 
 #motivation p {                    /*Styling af paragraph under motivations section*/                     
     flex: 1;                       /*Tillader paragraph til at gro og mindske*/
-    width: 50%;
+    width: 60%;
     color: var(--white);
+    font-size: 18px;
 }
 
 #motivation a{                      /*Styling af eksterne link under motivations section*/
@@ -230,6 +232,11 @@ aside {                             /*Styling og layout for aside*/
 
 aside p{                            /*Styling for paragraph under aside*/
     padding-bottom: 10px;
+    font-size: 18px;
+}
+
+aside h3{
+    font-size: 2rem;
 }
 
 aside .content{                     /*Styling for content blocks under aside*/
