@@ -284,6 +284,8 @@ aside a{
     font-style: normal;
 }
 
+/*STYILING TIL RE-DIRECT SIDE*/
+
 #konstruktion {                     /*Definere ayout for construction*/
     display: flex;
     flex-wrap: wrap;
@@ -568,5 +570,13 @@ footer nav ul li a {                /* Style for links i footer navigationsbar *
 
     #plant img{
         left: 57%;
+    }
+
+    aside h3 {
+        font-size: 1,1rem;
+    }
+
+    aside p{
+        font-size: 14px;
     }
 }
