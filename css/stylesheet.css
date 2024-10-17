@@ -408,6 +408,37 @@ footer nav ul li a {                /* Style for links i footer navigationsbar *
     padding: 2rem;
 }
 
+#struktur{
+    display: block;
+    padding: 1.5% 0;
+}
+
+section ol{
+    font-family: prenton-display, sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    letter-spacing: 1px;
+    padding: 1%;
+}
+
+section ul{
+    font-family: prenton-display, sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    letter-spacing: 1px;
+    padding: 1.5%;
+}
+
+section h3{
+    padding: 1.5% 0;
+}
+
+section p{
+    font-family: prenton-display, sans-serif;
+    font-weight: 800;
+    font-style: normal;
+}
+
 /*STYLING FOR DISKUSSION*/
 
 .bg-main {
