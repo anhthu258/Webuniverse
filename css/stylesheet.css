@@ -34,6 +34,10 @@ h1{                                 /*Styling for main heading h1*/
     padding-right: 10px;
 }
 
+a{
+    text-decoration: none;
+}
+
 h2{                                 /*Styling for secondary heading h2*/
     font-family: prenton-display, sans-serif;
     font-weight: 100;
@@ -206,9 +210,16 @@ header::after {                     /*Fjern floats efter header content*/
     top: 700px;
     left: 75%;
     z-index: 1;                     /*Sammen måde som navbar bliver plant img placeres øverst over for andre elementer med z-index*/
-    width: 150px;
     transform: rotate(270deg);      /*Rotering af billedet*/
     width: 800px;
+    max-width: 100%;
+}
+
+#plant-2{
+    position: absolute;
+    right: 75%;
+    top: 1200px;
+    max-width: 100%;
 }
 
 aside {                             /*Styling og layout for aside*/
@@ -390,7 +401,8 @@ footer nav ul li a {                /* Style for links i footer navigationsbar *
 
 /*STYLING FOR DISKUSSION*/
 
-.bg-main{
+.bg-main {
+    position: relative;                                     /*sørge for at positionen relativt indeholder pseudo-element*/
     background-image: url(../img/students.jpg);
     background-size: cover;
     background-position: center;
@@ -401,10 +413,26 @@ footer nav ul li a {                /* Style for links i footer navigationsbar *
     align-items: center;
     padding-left: 50px;
 }
+                                                            /*pseudo-element danner en full overlay på topen af .bg main*/
 
-.bg-main h1{
-    color: var(--white);
+.bg-main::before {                                          /*Tilføjer en tint før pseudo elementet*/
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);               /* Black tint with 50% opacity */
+    z-index: 1;                                           /* Place the tint behind the text */
 }
+
+.bg-main h1 {
+    position: relative;                                 /* Ensure h1 is above the tint */
+    z-index: 2;                                         /* Place the h1 on top of the tint */
+    color: var(--white);
+    text-align: center;
+}
+
 
 .comment-section {
     background: white;
@@ -481,7 +509,7 @@ footer nav ul li a {                /* Style for links i footer navigationsbar *
     background-color: var(--dark-grey);
 }
 
-@media (max-width:768px){             /* Media query for screens smaller than 991px */
+@media (max-width:900px){             /* Media query for screens smaller than 991px */
     #logo{                            /* Gemmer logoet på mindre skærm */
         display: none;
     }
@@ -520,5 +548,18 @@ footer nav ul li a {                /* Style for links i footer navigationsbar *
     header .navbar ul li ul li ul{   /*Definere full-width til nested dropdown menu*/
         width: 100%;
         left: 0;
+    }
+
+    #motivation p{
+        max-width: 100%;
+        width: auto;
+    }
+
+    #motivation img{
+        display: contents;
+    }
+
+    #plant img{
+        left: 57%;
     }
 }
